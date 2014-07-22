@@ -37,10 +37,8 @@ command! PrettyJson %!python -m json.tool
 " Make the current file executable
 nmap ,x :w<cr>:!chmod 755 %<cr>:e<cr>
 
-" This one doesn't work, whatever
 vmap <C-C> "+y
-nmap <C-V> "+p
-imap <C-V> <C-o><C-V>
+imap <C-V> <C-o>"+p
 
 " Status line
 fun! <SID>SetStatusLine()
